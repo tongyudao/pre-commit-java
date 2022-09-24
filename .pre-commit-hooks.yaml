@@ -21,3 +21,10 @@
   entry: /bin/bash /opt/run_checkstyle.sh
   files: \.java$
   require_serial: true
+  
+- id: junit
+  name: junit
+  description: "Runs the junit test before commit."
+  language: docker
+  entry: /bin/bash junit5.sh
+  require_serial: true
